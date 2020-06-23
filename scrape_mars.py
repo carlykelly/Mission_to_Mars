@@ -70,7 +70,9 @@ def scrape():
     table_url = "https://space-facts.com/mars/"
     tables = pd.read_html(table_url)
     tables
-    mars_info = tables[1]
+    
+    mars_info = tables[0]
+    mars_info = mars_info.rename(columns = {0:"Description", 1:"Value"})
     mars_info_dict = mars_info.to_dict("records")
     
     # Info back to html
