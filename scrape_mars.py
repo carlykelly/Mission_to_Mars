@@ -46,7 +46,6 @@ def scrape():
     time.sleep(2)
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
-    footer = soup.find('footer')
     image_url = soup.find('a', class_="fancybox")['data-fancybox-href']
     image_url = f"https://www.jpl.nasa.gov{image_url}"
     image_url
@@ -56,7 +55,7 @@ def scrape():
     
     twitter_url = "https://twitter.com/marswxreport?lang=en"
     browser.visit(twitter_url)
-    time.sleep(2)
+    time.sleep(5)
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
     tweet = soup.find('div', class_="css-901oao r-hkyrab r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0")
@@ -73,10 +72,9 @@ def scrape():
     
     mars_info = tables[0]
     mars_info = mars_info.rename(columns = {0:"Description", 1:"Value"})
-    mars_info_dict = mars_info.to_dict("records")
     
     # Info back to html
-    mars_html = mars_info.to_html()
+    mars_html = mars_info.to_html(index = False, classes="table-striped")
     
     # Mars Hemispheres
     
@@ -109,7 +107,7 @@ def scrape():
                  "News": body,
                  "Featured_Mars_Image": image_url,
                  "Mars_Weather":mars_weather,
-                 "Mars_Table": mars_info_dict,
+                 "Mars_Table":mars_html,
                  "Hemisphere_Info":hemisphere_images_urls}
     return mars_dict
 
