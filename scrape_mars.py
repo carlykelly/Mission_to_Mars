@@ -36,9 +36,7 @@ def scrape():
     body= article_location.find('div', class_="article_teaser_body").text
     print(f"{article_title} : {body}")
     
-    
     # Mars Images
-    
     
     image_website = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(image_website)
