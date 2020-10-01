@@ -34,3 +34,7 @@ https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=
 
 * A route that will query the database and pass the mars data into HTML template was created.
 
+## HTML file
+
+Lastly a HTML file called 'index.html' was created that displayed all of the data in HTML elements.
+
