@@ -61,7 +61,6 @@ def scrape():
     
     # Mars Facts
     
-    
     table_url = "https://space-facts.com/mars/"
     tables = pd.read_html(table_url)
     tables
