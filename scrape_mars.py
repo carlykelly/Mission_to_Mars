@@ -22,8 +22,6 @@ def scrape():
     browser.visit(url)
     #sleep is used to ensure page has time to load before scraping attempt.
     time.sleep(2)
-    
-    
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
     
