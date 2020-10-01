@@ -1,4 +1,4 @@
-# Mission_to_Mars
+# Mission to Mars
 
 The project in this repository is an assignment completed for The George Washington University Data Analysis and Visualization Bootcamp.
 
