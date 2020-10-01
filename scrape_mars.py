@@ -14,7 +14,6 @@ import time
 
 def scrape():
     # Beautiful Soup Start up
-    
     executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
     browser = Browser('chrome', **executable_path, headless=False)
     
