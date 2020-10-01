@@ -49,7 +49,6 @@ def scrape():
     
     # Mars Weather
     
-    
     twitter_url = "https://twitter.com/marswxreport?lang=en"
     browser.visit(twitter_url)
     time.sleep(5)
