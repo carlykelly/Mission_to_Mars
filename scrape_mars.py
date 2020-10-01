@@ -27,7 +27,7 @@ def scrape():
     
     # Mars News
     
-    #Finding the artilce 
+    #Finding the article
     article_location = soup.find('div', class_="list_text")
     #Finding the title of the article
     title_location = article_location.find('div', class_="content_title")
